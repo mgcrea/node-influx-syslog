@@ -20,3 +20,98 @@ Object {
   },
 }
 `;
+
+exports[`bunyan createSyslogStream should properly create a stream 1`] = `
+DestroyableTransform {
+  "_destroyed": false,
+  "_events": Object {
+    "prefinish": [Function],
+  },
+  "_eventsCount": 1,
+  "_maxListeners": undefined,
+  "_readableState": ReadableState {
+    "awaitDrain": 0,
+    "buffer": BufferList {
+      "head": null,
+      "length": 0,
+      "tail": null,
+    },
+    "decoder": null,
+    "defaultEncoding": "utf8",
+    "destroyed": false,
+    "emitClose": true,
+    "emittedReadable": false,
+    "encoding": null,
+    "endEmitted": false,
+    "ended": false,
+    "flowing": null,
+    "highWaterMark": 16,
+    "length": 0,
+    "needReadable": true,
+    "objectMode": true,
+    "paused": true,
+    "pipes": null,
+    "pipesCount": 0,
+    "readableListening": false,
+    "reading": false,
+    "readingMore": false,
+    "resumeScheduled": false,
+    "sync": false,
+  },
+  "_transform": [Function],
+  "_transformState": Object {
+    "afterTransform": [Function],
+    "needTransform": false,
+    "transforming": false,
+    "writecb": null,
+    "writechunk": null,
+    "writeencoding": null,
+  },
+  "_writableState": WritableState {
+    "bufferProcessing": false,
+    "bufferedRequest": null,
+    "bufferedRequestCount": 0,
+    "corked": 0,
+    "corkedRequestsFree": CorkedRequest {
+      "entry": null,
+      "finish": [Function],
+      "next": null,
+    },
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "destroyed": false,
+    "emitClose": true,
+    "ended": false,
+    "ending": false,
+    "errorEmitted": false,
+    "finalCalled": false,
+    "finished": false,
+    "highWaterMark": 16,
+    "lastBufferedRequest": null,
+    "length": 0,
+    "needDrain": false,
+    "objectMode": true,
+    "onwrite": [Function],
+    "pendingcb": 0,
+    "prefinished": false,
+    "sync": true,
+    "writecb": null,
+    "writelen": 0,
+    "writing": false,
+  },
+  "allowHalfOpen": true,
+  "readable": true,
+  "writable": true,
+}
+`;
+
+exports[`bunyan getSyslogSeverityLevel should properly get a syslog levels 1`] = `
+Array [
+  "debug",
+  "debug",
+  "info",
+  "warning",
+  "err",
+  "crit",
+]
+`;
