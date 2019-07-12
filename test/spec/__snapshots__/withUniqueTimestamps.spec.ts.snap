@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withUniqueTimestamps should properly order points by nanoseconds 1`] = `
+Array [
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000000",
+    },
+    "timestamp": "1562361784183000000",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000000",
+    },
+    "timestamp": "1562361784183000001",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000000",
+    },
+    "timestamp": "1562361784183000002",
+  },
+]
+`;
+
+exports[`withUniqueTimestamps should properly order points by nanoseconds 2 1`] = `
+Array [
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000123",
+    },
+    "timestamp": "1562361784183000123",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000123",
+    },
+    "timestamp": "1562361784183000124",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000123",
+    },
+    "timestamp": "1562361784183000125",
+  },
+]
+`;
+
+exports[`withUniqueTimestamps should properly order points by nanoseconds 3 1`] = `
+Array [
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000123",
+    },
+    "timestamp": "1562361784183000123",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000123",
+    },
+    "timestamp": "1562361784183000124",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784183000456",
+    },
+    "timestamp": "1562361784183000456",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784185000789",
+    },
+    "timestamp": "1562361784185000789",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784185000789",
+    },
+    "timestamp": "1562361784185000790",
+  },
+  Object {
+    "fields": Object {
+      "timestamp": "1562361784185000789",
+    },
+    "timestamp": "1562361784185000791",
+  },
+]
+`;

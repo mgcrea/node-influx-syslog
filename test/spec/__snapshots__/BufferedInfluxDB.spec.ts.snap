@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BufferedInfluxDB should properly connect should only call parent writePoints after wait delay 1`] = `
+Array [
+  Object {
+    "fields": Object {
+      "duration": 1000,
+      "path": "/foo/bar",
+    },
+    "measurement": "response_times",
+    "tags": Object {
+      "host": "foobar",
+    },
+  },
+]
+`;
+
+exports[`BufferedInfluxDB should properly connect should only call parent writePoints after wait delay 2`] = `Array []`;
+
+exports[`BufferedInfluxDB should properly connect should only call parent writePoints once after multiple writePoints 1`] = `
+Array [
+  Object {
+    "fields": Object {
+      "duration": 1000,
+      "path": "/foo/bar",
+    },
+    "measurement": "response_times",
+    "tags": Object {
+      "host": "foobar",
+    },
+  },
+  Object {
+    "fields": Object {
+      "duration": 1000,
+      "path": "/foo/baz",
+    },
+    "measurement": "response_times",
+    "tags": Object {
+      "host": "foobar",
+    },
+  },
+]
+`;
+
+exports[`BufferedInfluxDB should properly connect should only call parent writePoints once after multiple writePoints 2`] = `Array []`;

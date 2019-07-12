@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bunyan castSyslogInputPoint should properly cast a syslog point 1`] = `
+Object {
+  "fields": Object {
+    "facility_code": 14,
+    "message": "bazqux",
+    "procid": "1",
+    "severity_code": 7,
+    "timestamp": "NaN000000",
+    "version": 1,
+  },
+  "measurement": "syslog",
+  "tags": Object {
+    "appname": "app",
+    "facility": "foobar",
+    "host": "hostname",
+    "hostname": "hostname",
+    "severity": "debug",
+  },
+}
+`;

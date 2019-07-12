@@ -1,0 +1,55 @@
+{
+  "name": "influx-syslog-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "Olivier Louvignes <olivier@mgcrea.io>",
+  "repository": "github:mgcrea/node-influx-syslog-logger",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn spec:watch",
+    "test": "yarn pretty && yarn lint && yarn spec",
+    "spec": "CI=true jest --runInBand --colors",
+    "spec:watch": "yarn spec --watch",
+    "spec:coverage": "yarn spec --coverage",
+    "lint": "eslint --ext .ts src/",
+    "pretty": "prettier --check '{src,test}/**/*.ts'",
+    "build": "babel --source-maps --extensions .js,.ts --out-dir lib/ --delete-dir-on-start --ignore **/__tests__ src/",
+    "build:watch": "yarn build --watch --verbose",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "influx": "^5.4.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.padstart": "^4.6.1",
+    "strip-ansi": "^5.2.0",
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/bunyan": "^1.8.6",
+    "@types/jest": "^24.0.15",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.padstart": "^4.6.6",
+    "@types/node": "^12.6.2",
+    "@types/through2": "^2.0.34",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-plugin-module-name-mapper": "^1.2.0",
+    "bunyan": "^1.8.12",
+    "debug-utils": "^0.5.3",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "bunyan": "^1.8.12"
+  }
+}

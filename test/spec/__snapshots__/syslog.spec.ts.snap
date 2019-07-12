@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`syslog should properly export a schema 1`] = `
+Object {
+  "fields": Object {
+    "facility_code": 1,
+    "message": 2,
+    "procid": 2,
+    "severity_code": 1,
+    "timestamp": 1,
+    "version": 1,
+  },
+  "measurement": "syslog",
+  "tags": Array [
+    "severity",
+    "facility",
+    "host",
+    "hostname",
+    "appname",
+  ],
+}
+`;
