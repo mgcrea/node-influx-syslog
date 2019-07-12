@@ -1,6 +1,6 @@
 {
   "name": "influx-syslog",
-  "version": "1.0.0",
+  "version": "0.2.1",
   "description": "Node.js InfluxDB syslog logger",
   "main": "lib/index.js",
   "author": "Olivier Louvignes <olivier@mgcrea.io>",
