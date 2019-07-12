@@ -1,9 +1,14 @@
-import {InfluxDB} from 'influx';
-import Logger, {LogLevel as BunyanLogLevel} from 'bunyan';
+import {InfluxDB, ISingleHostConfig, IClusterConfig} from 'influx';
+import Logger, {
+  LoggerOptions as BunyanLoggerOptions,
+  createLogger as createBunyanLogger,
+  LogLevel as BunyanLogLevel
+} from 'bunyan';
 import stripAnsi from 'strip-ansi';
 import {IPoint as InfluxPoint} from 'influx';
-import {SyslogLevel, SEVERITY_LEVEL_VALUES} from './syslog';
+import {SyslogLevel, SEVERITY_LEVEL_VALUES, SYSLOG_SCHEMA} from './syslog';
 import through2 from 'through2';
+import BufferedInfluxDB from 'src/utils/BufferedInfluxDB';
 
 export type BunyanLogObject = {
   level: BunyanLogLevel;
@@ -41,8 +46,8 @@ export const castSyslogInputPoint: (o: BunyanLogObject) => InfluxPoint = logObje
   const timestamp = `${time.getTime()}000000`;
   const fields = {
     version: 1,
-    severity_code: SEVERITY_LEVEL_VALUES[severity],
-    facility_code: 14, // console
+    severity_code: SEVERITY_LEVEL_VALUES[severity], // eslint-disable-line @typescript-eslint/camelcase
+    facility_code: 14, // eslint-disable-line @typescript-eslint/camelcase
     timestamp,
     procid: pid,
     message: stripAnsi(msg)
@@ -54,11 +59,30 @@ export const castSyslogInputPoint: (o: BunyanLogObject) => InfluxPoint = logObje
   };
 };
 
-const createSyslogWritableStream = (influx: InfluxDB) =>
+export const createSyslogStream = (influx: InfluxDB) =>
   through2.obj((chunkObj: BunyanLogObject, _enc: string, callback: () => void) => {
     const syslogPoint = castSyslogInputPoint(chunkObj);
     influx.writePoints([syslogPoint]);
     callback();
   });
 
-export default createSyslogWritableStream;
+export const createLogger = (
+  {streams = [], ...bunyanOptions}: BunyanLoggerOptions,
+  {schema = [], ...influxOptions}: ISingleHostConfig | IClusterConfig
+): Logger => {
+  const influx = new BufferedInfluxDB({
+    schema: [...schema, SYSLOG_SCHEMA],
+    ...influxOptions
+  });
+  return createBunyanLogger({
+    streams: [
+      ...streams,
+      {
+        stream: createSyslogStream(influx),
+        level: 'trace',
+        type: 'raw'
+      }
+    ],
+    ...bunyanOptions
+  });
+};

@@ -14,5 +14,13 @@ module.exports = {
   env: {
     es6: true,
     node: true
+  },
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/prefer-interface': 'off',
+    '@typescript-eslint/array-type': 'off'
   }
 };

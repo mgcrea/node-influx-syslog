@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`influxSyslog should expose a stable API 1`] = `
+Object {
+  "BufferedInfluxDB": [Function],
+  "SYSLOG_SCHEMA": Object {
+    "fields": Object {
+      "facility_code": 1,
+      "message": 2,
+      "procid": 2,
+      "severity_code": 1,
+      "timestamp": 1,
+      "version": 1,
+    },
+    "measurement": "syslog",
+    "tags": Array [
+      "severity",
+      "facility",
+      "host",
+      "hostname",
+      "appname",
+    ],
+  },
+  "__esModule": true,
+  "createSyslogStream": [Function],
+  "default": [Function],
+}
+`;

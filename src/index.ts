@@ -1,7 +1,7 @@
-import createBunyanSyslogStream from './adapters/bunyan';
+import {createLogger, createSyslogStream} from './adapters/bunyan';
 import {SYSLOG_SCHEMA} from './adapters/syslog';
-import BufferedInfluxDB from './BufferedInfluxDB';
+import BufferedInfluxDB from './utils/BufferedInfluxDB';
 
-export {SYSLOG_SCHEMA, BufferedInfluxDB, createBunyanSyslogStream};
+export {SYSLOG_SCHEMA, BufferedInfluxDB, createSyslogStream};
 
-export default createBunyanSyslogStream;
+export default createLogger;

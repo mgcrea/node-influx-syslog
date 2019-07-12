@@ -17,8 +17,8 @@ export const SYSLOG_SCHEMA = {
   measurement: 'syslog',
   fields: {
     version: FieldType.INTEGER,
-    severity_code: FieldType.INTEGER,
-    facility_code: FieldType.INTEGER,
+    severity_code: FieldType.INTEGER, // eslint-disable-line @typescript-eslint/camelcase
+    facility_code: FieldType.INTEGER, // eslint-disable-line @typescript-eslint/camelcase
     timestamp: FieldType.INTEGER,
     procid: FieldType.STRING,
     // msgid: FieldType.STRING,

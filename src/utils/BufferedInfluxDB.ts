@@ -3,14 +3,14 @@ import debounce from 'lodash.debounce';
 
 import withUniqueTimestamps from 'src/utils/withUniqueTimestamps';
 
-type BufferedInfluxDBOptions = {wait?: number; maxWait?: number};
+type BufferedInfluxDBOptions = {debounceWait?: number};
 
 class BufferedInfluxDB extends InfluxDB {
   private __stackedPoints: IPoint[];
-  constructor(options: any, {wait = 1000}: BufferedInfluxDBOptions = {}) {
+  constructor(options: any, {debounceWait = 1000}: BufferedInfluxDBOptions = {}) {
     super(options);
     this.__stackedPoints = [];
-    this.__debouncedFlushPoints = debounce(this.__flushPoints, wait, {maxWait: wait});
+    this.__debouncedFlushPoints = debounce(this.__flushPoints, debounceWait, {maxWait: debounceWait});
   }
   async writePoints(points: IPoint[], options?: IWriteOptions): Promise<void> {
     this.__stackedPoints.push(...points);

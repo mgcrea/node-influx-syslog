@@ -1,7 +1,7 @@
 {
-  "name": "influx-syslog-logger",
+  "name": "influx-syslog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js InfluxDB syslog logger",
   "main": "lib/index.js",
   "author": "Olivier Louvignes <olivier@mgcrea.io>",
   "repository": "github:mgcrea/node-influx-syslog-logger",
@@ -14,11 +14,13 @@
     "spec:coverage": "yarn spec --coverage",
     "lint": "eslint --ext .ts src/",
     "pretty": "prettier --check '{src,test}/**/*.ts'",
+    "typecheck": "tsc --noEmit",
     "build": "babel --source-maps --extensions .js,.ts --out-dir lib/ --delete-dir-on-start --ignore **/__tests__ src/",
     "build:watch": "yarn build --watch --verbose",
     "prepublish": "yarn build"
   },
   "dependencies": {
+    "bunyan": "^1.8.12",
     "influx": "^5.4.0",
     "lodash.debounce": "^4.0.8",
     "lodash.padstart": "^4.6.1",
@@ -48,8 +50,5 @@
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "typescript": "^3.5.3"
-  },
-  "peerDependencies": {
-    "bunyan": "^1.8.12"
   }
 }
