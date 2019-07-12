@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/influx-syslog.svg)](https://github.com/mgcrea/node-influx-syslog/releases)
 [![license](https://img.shields.io/github/license/mgcrea/node-influx-syslog.svg?style=flat)](https://tldrlegal.com/license/mit-license)
-[![build status](http://img.shields.io/travis/mgcrea/node-influx-syslog/master.svg?style=flat)](http://travis-ci.org/mgcrea/node-influx-syslog)
+[![build status](https://travis-ci.com/mgcrea/node-influx-syslog.svg?branch=master)](https://travis-ci.com/mgcrea/node-influx-syslog)
 [![dependencies status](https://img.shields.io/david/mgcrea/node-influx-syslog.svg?style=flat)](https://david-dm.org/mgcrea/node-influx-syslog)
 [![devDependencies status](https://img.shields.io/david/dev/mgcrea/node-influx-syslog.svg?style=flat)](https://david-dm.org/mgcrea/node-influx-syslog#info=devDependencies)
 
