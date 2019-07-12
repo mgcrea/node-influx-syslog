@@ -43,7 +43,7 @@ export const getSyslogSeverityLevel = (level: BunyanLogLevel): SyslogLevel => {
 
 export const castSyslogInputPoint: (o: BunyanLogObject) => InfluxPoint = logObject => {
   const {time, level, name, pid, msg, hostname} = logObject;
-  const {appname = 'app', facility = 'facility'} = logObject;
+  const {appname = 'app', facility = name} = logObject;
   const severity = getSyslogSeverityLevel(level);
   const tags = {severity, appname, facility, hostname, host: hostname};
   const timestamp = `${time.getTime()}000000`;
