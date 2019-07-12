@@ -8,7 +8,7 @@
 
 Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://github.com/influxdata/influxdb) instance to analyze aggregated results with [Chronograf](https://github.com/influxdata/chronograf).
 
-[![Banner](http://mgcrea.github.io/node-influx-syslog/.github/log-viewer-overview.png)](https://docs.influxdata.com/chronograf/v1.7/guides/analyzing-logs/)
+[![Banner](https://mgcrea.github.io/node-influx-syslog/images/log-viewer-overview.png)](https://docs.influxdata.com/chronograf/v1.7/guides/analyzing-logs/)
 
 - Uses [bunyan](https://github.com/trentm/node-bunyan) writeable streams as a logger interface.
 
