@@ -6,13 +6,13 @@ node_js:
 
 env:
   global:
-    - CODACY_PROJECT_TOKEN=f041e6cde1724bacae7ede212c5b8539
+    - CODECOV_TOKEN=84a6acca-26dd-47d0-a16d-93f7aa6fd9dd
 
 before_script:
   - date --rfc-2822
-
+  - yarn global codecov
 script:
   - yarn run spec:coverage
   - yarn run lint
-# after_script:
-#   - cat coverage/lcov.info | codacy-coverage
+after_script:
+  - cat coverage/lcov.info | codecov
