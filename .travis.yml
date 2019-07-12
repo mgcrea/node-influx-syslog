@@ -10,7 +10,7 @@ env:
 
 before_script:
   - date --rfc-2822
-  - yarn global codecov
+  - yarn global add codecov
 script:
   - yarn run spec:coverage
   - yarn run lint
