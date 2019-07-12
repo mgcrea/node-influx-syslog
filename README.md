@@ -3,8 +3,8 @@
 [![npm version](https://img.shields.io/npm/v/influx-syslog.svg)](https://github.com/mgcrea/node-influx-syslog/releases)
 [![license](https://img.shields.io/github/license/mgcrea/node-influx-syslog.svg?style=flat)](https://tldrlegal.com/license/mit-license)
 [![build status](https://travis-ci.com/mgcrea/node-influx-syslog.svg?branch=master)](https://travis-ci.com/mgcrea/node-influx-syslog)
-[![dependencies status](https://david-dm.org/mgcrea/node-influx-syslog/status.svg?style=flat-square)](https://david-dm.org/mgcrea/node-influx-syslog)
-[![devDependencies status](https://david-dm.org/mgcrea/node-influx-syslog/dev-status.svg?style=flat-square)](https://david-dm.org/mgcrea/node-influx-syslog?type=dev)
+[![dependencies status](https://david-dm.org/mgcrea/node-influx-syslog/status.svg)](https://david-dm.org/mgcrea/node-influx-syslog)
+[![devDependencies status](https://david-dm.org/mgcrea/node-influx-syslog/dev-status.svg)](https://david-dm.org/mgcrea/node-influx-syslog?type=dev)
 
 Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://github.com/influxdata/influxdb) instance to analyze aggregated results with [Chronograf](https://github.com/influxdata/chronograf).
 
