@@ -97,18 +97,8 @@ You can also use `BufferedInfluxDB` class instead to automatically batch writes 
 import {createLogger} from 'bunyan';
 import {createSyslogStream, SYSLOG_SCHEMA, BufferedInfluxDB} from 'influx-syslog';
 
-const influx = new BufferedInfluxDB(
-  // InfluxDB constructor options
-  {
-    host: 'localhost',
-    database: 'syslog_db',
-    schema: [SYSLOG_SCHEMA]
-  },
-  // BufferedInfluxDB options
-  {
-    debounceWait: 2000
-  }
-);
+const influx = new BufferedInfluxDB(INFLUXDB_URI, {debounceWait: 1000});
+influx.addSchema(SYSLOG_SCHEMA);
 
 const log = createLogger({
   name: 'myLogger',

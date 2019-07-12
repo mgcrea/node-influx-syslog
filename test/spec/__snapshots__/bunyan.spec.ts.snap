@@ -13,7 +13,7 @@ Object {
   "measurement": "syslog",
   "tags": Object {
     "appname": "app",
-    "facility": "foobar",
+    "facility": "foofacility",
     "host": "hostname",
     "hostname": "hostname",
     "severity": "debug",

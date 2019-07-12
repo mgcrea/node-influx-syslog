@@ -11,7 +11,8 @@ describe('bunyan', () => {
       const logObject: BunyanLogObject = {
         time: new Date(1562361784183000000),
         level: Logger.DEBUG,
-        name: 'foobar',
+        name: 'fooname',
+        facility: 'foofacility',
         pid: '1',
         msg: 'bazqux',
         hostname: 'hostname'
