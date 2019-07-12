@@ -23,6 +23,14 @@ Originally built to properly monitor [scalable Kubernetes deployments](https://k
 
 ## Documentation
 
+### Installation
+
+```bash
+yarn add influx-syslog
+# or
+npm install influx-syslog
+```
+
 ### Examples
 
 #### Simple example
