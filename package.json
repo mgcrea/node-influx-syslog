@@ -1,6 +1,6 @@
 {
   "name": "influx-syslog",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Node.js InfluxDB syslog logger",
   "main": "lib/index.js",
   "author": "Olivier Louvignes <olivier@mgcrea.io>",
@@ -15,7 +15,9 @@
     "lint": "eslint --ext .ts src/",
     "pretty": "prettier --check '{src,test}/**/*.ts'",
     "typecheck": "tsc --noEmit",
-    "build": "babel --source-maps --extensions .js,.ts --out-dir lib/ --delete-dir-on-start --ignore **/__tests__ src/",
+    "build": "yarn build:source && yarn build:typings",
+    "build:source": "babel --source-maps --extensions .js,.ts --out-dir lib/ --delete-dir-on-start --ignore **/__tests__ src/",
+    "build:typings": "tsc --declaration",
     "build:watch": "yarn build --watch --verbose",
     "prepublish": "yarn build"
   },

@@ -15,7 +15,9 @@ Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://g
 
 - Relies on [node-influx](https://github.com/node-influx/node-influx) to connect and write to the InfluxDB instance.
 
-- Provides basic writes batching to InfluxDB thanks to a custom sublass `BufferedInfluxDB`.
+- Provides basic writes batching to InfluxDB thanks to a custom sublass [`BufferedInfluxDB`](https://github.com/mgcrea/node-influx-syslog/blob/master/src/utils/BufferedInfluxDB.ts).
+
+- Built with [TypeScript](https://www.typescriptlang.org/) for static type checking
 
 ## Documentation
 
