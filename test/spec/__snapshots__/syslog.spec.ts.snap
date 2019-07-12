@@ -2,6 +2,19 @@
 
 exports[`syslog should properly export a schema 1`] = `
 Object {
+  "alert": 1,
+  "crit": 2,
+  "debug": 7,
+  "emerg": 0,
+  "err": 3,
+  "info": 6,
+  "notice": 5,
+  "warning": 4,
+}
+`;
+
+exports[`syslog should properly export a schema 2`] = `
+Object {
   "fields": Object {
     "facility_code": 1,
     "message": 2,
