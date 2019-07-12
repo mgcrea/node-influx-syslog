@@ -14,11 +14,17 @@ Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://g
 
 - Relies on [node-influx](https://github.com/node-influx/node-influx) to connect and write to the InfluxDB instance.
 
+- Provides basic writes batching to InfluxDB thanks to a custom sublass `BufferedInfluxDB`.
+
 ## Documentation
 
 ### Examples
 
 #### Simple example
+
+You can use the provided factory function to quickly get a working logger.
+
+Will use debounced writes to InfluxDB by default (with `BufferedInfluxDB`).
 
 ```js
 import createLogger from 'influx-syslog';
@@ -45,7 +51,9 @@ const log = createLogger(
 log.info('hi');
 ```
 
-#### Advanced example with an existing InfluxDB instance and manually creating a logger
+#### Advanced example
+
+You might want to setup both the influx instance and buyan logger yourself.
 
 ```js
 import {createLogger} from 'bunyan';
@@ -78,7 +86,7 @@ log.info('hi');
 
 #### Advanced example with debounced writes to InfluxDB
 
-This library also provides a `BufferedInfluxDB` class that automatically batch writes to InfluxDB every `debounceWait` ms.
+You can also use `BufferedInfluxDB` class instead to automatically batch writes to InfluxDB every `debounceWait` ms.
 
 ```js
 import {createLogger} from 'bunyan';
