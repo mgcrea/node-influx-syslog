@@ -1,4 +1,4 @@
-# Influx Syslog
+# Node.js Influx Syslog
 
 [![npm version](https://img.shields.io/npm/v/influx-syslog.svg)](https://github.com/mgcrea/node-influx-syslog/releases)
 [![license](https://img.shields.io/github/license/mgcrea/node-influx-syslog.svg?style=flat)](https://tldrlegal.com/license/mit-license)
