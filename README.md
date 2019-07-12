@@ -7,7 +7,7 @@
 [![devDependencies status](https://david-dm.org/mgcrea/node-influx-syslog/dev-status.svg)](https://david-dm.org/mgcrea/node-influx-syslog?type=dev)
 [![coverage](https://codecov.io/gh/mgcrea/node-influx-syslog/branch/master/graph/badge.svg)](https://codecov.io/gh/mgcrea/node-influx-syslog)
 
-Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://github.com/influxdata/influxdb) instance to analyze aggregated results with [Chronograf](https://github.com/influxdata/chronograf).
+Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://github.com/influxdata/influxdb) instance using the [Syslog Protocol](https://tools.ietf.org/html/rfc5424) to analyze aggregated results with [Chronograf](https://github.com/influxdata/chronograf).
 
 Originally built to properly monitor [scalable Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#scaling-a-deployment) & micro-services.
 
