@@ -1,0 +1,8 @@
+*
+.*
+package.json
+LICENSE*
+README*
+CHANGELOG*
+!lib/**/*.js
+!lib/**/*.js.map

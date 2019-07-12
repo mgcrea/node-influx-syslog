@@ -75,7 +75,7 @@ const log = createLogger({
       level: 'debug'
     },
     {
-      stream: createSyslogStream(),
+      stream: createSyslogStream(influx),
       level: 'trace',
       type: 'raw'
     }
@@ -114,7 +114,7 @@ const log = createLogger({
       level: 'debug'
     },
     {
-      stream: createSyslogStream(),
+      stream: createSyslogStream(influx),
       level: 'trace',
       type: 'raw'
     }
