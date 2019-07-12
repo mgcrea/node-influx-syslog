@@ -6,3 +6,4 @@ README*
 CHANGELOG*
 !lib/**/*.js
 !lib/**/*.js.map
+!lib/**/*.d.ts
