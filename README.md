@@ -9,6 +9,8 @@
 
 Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://github.com/influxdata/influxdb) instance to analyze aggregated results with [Chronograf](https://github.com/influxdata/chronograf).
 
+Originally built to properly monitor [scalable Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#scaling-a-deployment) & micro-services.
+
 [![Banner](https://mgcrea.github.io/node-influx-syslog/images/log-viewer-overview.png)](https://docs.influxdata.com/chronograf/v1.7/guides/analyzing-logs/)
 
 - Uses [bunyan](https://github.com/trentm/node-bunyan) writeable streams as a logger interface.
@@ -17,7 +19,7 @@ Easily forward [Node.js](https://nodejs.org/en/) logs to an [InfluxDB](https://g
 
 - Provides basic writes batching to InfluxDB thanks to a custom sublass [`BufferedInfluxDB`](https://github.com/mgcrea/node-influx-syslog/blob/master/src/utils/BufferedInfluxDB.ts).
 
-- Built with [TypeScript](https://www.typescriptlang.org/) for static type checking
+- Built with [TypeScript](https://www.typescriptlang.org/) for static type checking with exported types along the library.
 
 ## Documentation
 
