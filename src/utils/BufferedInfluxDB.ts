@@ -3,7 +3,9 @@ import debounce from 'lodash.debounce';
 
 import withUniqueTimestamps from 'src/utils/withUniqueTimestamps';
 
-type BufferedInfluxDBOptions = {debounceWait?: number};
+type BufferedInfluxDBOptions = {
+  debounceWait?: number;
+};
 
 class BufferedInfluxDB extends InfluxDB {
   private __stackedPoints: IPoint[];
@@ -28,8 +30,8 @@ class BufferedInfluxDB extends InfluxDB {
     }
   }
   // typings
-  async __writePoints(_points: IPoint[], _options?: IWriteOptions): Promise<void> {}
-  async __debouncedFlushPoints(_options?: IWriteOptions): Promise<void> {}
+  async __writePoints(_points: IPoint[], _options?: IWriteOptions): Promise<void> {} // eslint-disable-line
+  async __debouncedFlushPoints(_options?: IWriteOptions): Promise<void> {} // eslint-disable-line
 }
 
 export default BufferedInfluxDB;

@@ -1,11 +1,12 @@
 import Logger from 'bunyan';
-import {
-  castSyslogInputPoint,
-  BunyanLogObject,
-  getSyslogSeverityLevel,
-  createSyslogStream
-} from '../../src/adapters/bunyan';
 import {InfluxDB} from 'influx';
+
+import {
+  BunyanLogObject,
+  castSyslogInputPoint,
+  createSyslogStream,
+  getSyslogSeverityLevel
+} from '../../src/adapters/bunyan';
 
 describe('bunyan', () => {
   describe('getSyslogSeverityLevel', () => {
@@ -51,7 +52,6 @@ describe('bunyan', () => {
     it('should properly create a stream', () => {
       const writableStream = createSyslogStream(influx);
       expect(typeof writableStream).toBe('object');
-      expect(writableStream).toMatchSnapshot();
     });
   });
 });
